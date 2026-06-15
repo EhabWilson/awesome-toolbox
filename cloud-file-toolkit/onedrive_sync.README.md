@@ -38,6 +38,7 @@ so private folder names are not exposed in git history.
 |--------------------|----------------------------|------------------------------------|
 | Zotero attachments | `com.yuhang.zotero-sync`   | `~/Library/Logs/zotero_sync.log`   |
 | Research vault     | `com.yuhang.research-sync` | `~/Library/Logs/research_sync.log` |
+| Robot project      | `com.yuhang.robot-sync`    | `~/Library/Logs/robot_sync.log`    |
 
 To see the actual paths for a pair, read its plist's `ProgramArguments`.
 
@@ -55,10 +56,11 @@ triggers:
 
 ### Managing an agent
 
-Replace `<label>` with `com.yuhang.zotero-sync` or `com.yuhang.research-sync`:
+Replace `<label>` with `com.yuhang.zotero-sync`, `com.yuhang.research-sync`, or
+`com.yuhang.robot-sync`:
 
 ```bash
-launchctl list | grep -E 'zotero-sync|research-sync'                 # status
+launchctl list | grep -E 'zotero-sync|research-sync|robot-sync'      # status
 launchctl kickstart -k gui/$(id -u)/<label>                          # run now
 launchctl bootout   gui/$(id -u) ~/Library/LaunchAgents/<label>.plist  # stop/unload
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/<label>.plist  # load
