@@ -39,6 +39,7 @@ so private folder names are not exposed in git history.
 | Zotero attachments | `com.yuhang.zotero-sync`   | `~/Library/Logs/zotero_sync.log`   |
 | Research vault     | `com.yuhang.research-sync` | `~/Library/Logs/research_sync.log` |
 | Robot project      | `com.yuhang.robot-sync`    | `~/Library/Logs/robot_sync.log`    |
+| Yibo 3D recon      | `com.yuhang.yibo3d-sync`   | `~/Library/Logs/yibo3d_sync.log`   |
 
 To see the actual paths for a pair, read its plist's `ProgramArguments`.
 
